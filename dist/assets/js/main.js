@@ -1,57 +1,51 @@
-const sliderText = document.querySelectorAll(".text-box-item");
-const sliderImages = document.querySelectorAll(".img-box-item");
-const dotsBox = document.querySelector(".dots-box");
-
-function autoplaySlider(interval) {
-  let totalSlides = 0;
-  if (sliderImages.length === sliderText.length) {
-    totalSlides = sliderImages.length;
-  } else if (sliderImages.length > sliderText.length) {
-    totalSlides = sliderText.length;
-  } else if (sliderImages.length < sliderText.length) {
-    totalSlides = sliderImages.length;
-  }
-
-  for (let i = 0; i < totalSlides; i++) {
-    classes = "dots-box-item w-[10px] h-[10px] rounded-full m-1";
-    if (i === 0) {
-      classes =
-        "dots-box-item dots-box-item-active w-[10px] h-[10px] rounded-full m-1";
-    }
-    const dot = document.createElement("div");
-    dot.setAttribute("class", classes);
-    dotsBox.appendChild(dot);
-  }
-
-  let currentIndex = 0;
-
-  function showNextSlide() {
-    const dotsBoxItem = document.querySelectorAll(".dots-box-item");
-    sliderText[currentIndex].classList.remove("active");
-    sliderImages[currentIndex].classList.remove("active");
-    dotsBoxItem[currentIndex].classList.remove("dots-box-item-active");
-    currentIndex = (currentIndex + 1) % totalSlides;
-    sliderText[currentIndex].classList.add("active");
-    sliderImages[currentIndex].classList.add("active");
-    dotsBoxItem[currentIndex].classList.add("dots-box-item-active");
-  }
-  setInterval(showNextSlide, interval);
-}
-
-//  7S
-autoplaySlider(7000);
 document.addEventListener("DOMContentLoaded", function () {
+  const sliderText = document.querySelectorAll(".text-box-item");
+  const sliderImages = document.querySelectorAll(".img-box-item");
+  const dotsBox = document.querySelector(".dots-box");
+
+  function autoplaySlider(interval) {
+    const totalSlides = Math.min(sliderImages.length, sliderText.length);
+
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.className = "dots-box-item w-[10px] h-[10px] rounded-full m-1";
+      if (i === 0) {
+        dot.classList.add("dots-box-item-active");
+      }
+      dotsBox.appendChild(dot);
+    }
+
+    let currentIndex = 0;
+
+    function showNextSlide() {
+      sliderText[currentIndex].classList.remove("active");
+      sliderImages[currentIndex].classList.remove("active");
+      dotsBox.children[currentIndex].classList.remove("dots-box-item-active");
+
+      currentIndex = (currentIndex + 1) % totalSlides;
+
+      sliderText[currentIndex].classList.add("active");
+      sliderImages[currentIndex].classList.add("active");
+      dotsBox.children[currentIndex].classList.add("dots-box-item-active");
+    }
+
+    setInterval(showNextSlide, interval);
+  }
+
+  // Start the slider with a 7-second interval
+  autoplaySlider(7000);
+
   const lazyImages = document.querySelectorAll("img.lazy");
 
-  const lazyLoad = (image) => {
+  function lazyLoad(image) {
     image.src = image.dataset.src;
     image.addEventListener("load", () => {
       image.classList.add("loaded");
     });
-  };
+  }
 
   if ("IntersectionObserver" in window) {
-    let observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           lazyLoad(entry.target);
