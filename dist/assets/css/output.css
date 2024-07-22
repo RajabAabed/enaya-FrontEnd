@@ -1322,7 +1322,7 @@ video {
 
 .lazy {
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity ease-in-out 0.3s;
 }
 
 .lazy.loaded {
