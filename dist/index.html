@@ -22,11 +22,11 @@
     />
     <!-- flow bite -->
     <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1//flowbite.min.css"
       rel="stylesheet"
     />
     <!-- Css files -->
-    <link rel="stylesheet" href="./assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/output.css" />
     <title>Enaya</title>
   </head>
   <body>
@@ -59,7 +59,7 @@
     <main>
       <section
         class="md:h-svh h-auto p-6 lg:px-8 bg-center bg-no-repeat bg-cover relative"
-        style="background-image: url('assets/images/slide-bg.png')"
+        style="background-image: url('/assets/images/slide-bg.png')"
       >
         <div class="mx-auto flex max-w-7xl items-stretch justify-between">
           <div class="text-box-items w-3/5 relative content-center">
@@ -102,13 +102,13 @@
           <div class="img-box-items w-2/5">
             <!-- Add images slider here -->
             <img
-              src="./assets/images/slide-1.png"
-              class="w-full img-box-item active"
+              data-src="assets/images/slide-1.png"
+              class="w-full img-box-item lazy active"
               alt="image silde 1"
             />
             <img
-              src="./assets/images/slide-2.png"
-              class="w-full img-box-item"
+              data-src="assets/images/slide-2.png"
+              class="w-full img-box-item lazy"
               alt="image silde 2"
             />
           </div>
@@ -124,22 +124,46 @@
           <!-- dont toch this -->
           <div class="logos-box flex md:w-auto w-full md:absolute bottom-0">
             <div class="md:h-24 h-auto py-5 pe-3">
-              <img src="./assets/images/client-1.png" class="h-full" alt="" />
+              <img
+                data-src="assets/images/client-1.png"
+                class="h-full lazy"
+                alt=""
+              />
             </div>
             <div class="md:h-24 h-auto py-5 pe-3">
-              <img src="./assets/images/client-2.png" class="h-full" alt="" />
+              <img
+                data-src="assets/images/client-2.png"
+                class="h-full lazy"
+                alt=""
+              />
             </div>
             <div class="md:h-24 h-auto py-5 pe-3">
-              <img src="./assets/images/client-3.png" class="h-full" alt="" />
+              <img
+                data-src="assets/images/client-3.png"
+                class="h-full lazy"
+                alt=""
+              />
             </div>
             <div class="md:h-24 h-auto py-5 pe-3">
-              <img src="./assets/images/client-4.png" class="h-full" alt="" />
+              <img
+                data-src="assets/images/client-4.png"
+                class="h-full lazy"
+                alt=""
+              />
             </div>
             <div class="md:h-24 h-auto py-5 pe-3">
-              <img src="./assets/images/client-5.png" class="h-full" alt="" />
+              <img
+                data-src="assets/images/client-5.png"
+                class="h-full lazy"
+                alt=""
+              />
             </div>
             <div class="md:h-24 h-auto py-5 pe-3">
-              <img src="./assets/images/client-6.png" class="h-full" alt="" />
+              <img
+                data-src="assets/images/client-6.png"
+                class="h-full lazy"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -161,9 +185,9 @@
             >
               <div class="goals-card">
                 <img
-                  src="assets/icons/icon-1.png"
+                  data-src="assets/icons/icon-1.png"
                   alt="Icon 1"
-                  class="w-[55px] h-[55px] mb-2 md:mb-0"
+                  class="w-[55px] h-[55px] mb-2 md:mb-0 lazy"
                 />
                 <div class="md:ms-4">
                   <h3 class="text-lg font-semibold font-IBM mb-2">
@@ -178,9 +202,9 @@
               </div>
               <div class="goals-card">
                 <img
-                  src="assets/icons/icon-2.png"
+                  data-src="assets/icons/icon-2.png"
                   alt="Icon 2"
-                  class="w-[55px] h-[55px] mb-2 md:mb-0"
+                  class="w-[55px] h-[55px] mb-2 md:mb-0 lazy"
                 />
                 <div class="md:ms-4">
                   <h3 class="text-lg font-semibold font-IBM mb-2">
@@ -195,9 +219,9 @@
               </div>
               <div class="goals-card">
                 <img
-                  src="assets/icons/icon-3.png"
+                  data-src="assets/icons/icon-3.png"
                   alt="Icon 3"
-                  class="w-[55px] h-[55px] mb-2 md:mb-0"
+                  class="w-[55px] h-[55px] mb-2 md:mb-0 lazy"
                 />
                 <div class="md:ms-4">
                   <h3 class="text-lg font-semibold font-IBM mb-2">
@@ -211,9 +235,9 @@
               </div>
               <div class="goals-card">
                 <img
-                  src="assets/icons/icon-4.png"
+                  data-src="assets/icons/icon-4.png"
                   alt="Icon 4"
-                  class="w-[55px] h-[55px] mb-2 md:mb-0"
+                  class="w-[55px] h-[55px] mb-2 md:mb-0 lazy"
                 />
                 <div class="md:ms-4">
                   <h3 class="text-lg font-semibold font-IBM mb-2">
@@ -227,9 +251,9 @@
               </div>
               <div class="goals-card">
                 <img
-                  src="assets/icons/icon-5.png"
+                  data-src="assets/icons/icon-5.png"
                   alt="Icon 5"
-                  class="w-[55px] h-[55px] mb-2 md:mb-0"
+                  class="w-[55px] h-[55px] mb-2 md:mb-0 lazy"
                 />
                 <div class="md:ms-4">
                   <h3 class="text-lg font-semibold font-IBM mb-2">
@@ -246,9 +270,9 @@
           </div>
           <div class="md:p-8">
             <img
-              src="assets/images/goals-image.png"
+              data-src="assets/images/goals-image.png"
               alt="Goals Section Image"
-              class="w-full"
+              class="w-full lazy"
             />
           </div>
         </div>
@@ -265,9 +289,9 @@
               <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="step-card group">
                   <img
-                    src="assets/icons/step-1.png"
+                    data-src="assets/icons/step-1.png"
                     alt="Step 1"
-                    class="mb-2 md:mb-0 w-20 h-20"
+                    class="mb-2 md:mb-0 w-20 h-20 lazy"
                   />
                   <p
                     class="md:ms-4 font-IBM font-normal text-base text-center md:text-start sm:text-center"
@@ -278,9 +302,9 @@
                 </div>
                 <div class="group step-card">
                   <img
-                    src="assets/icons/step-2.png"
+                    data-src="assets/icons/step-2.png"
                     alt="Step 2"
-                    class="mb-2 md:mb-0 w-20 h-20"
+                    class="mb-2 md:mb-0 w-20 h-20 lazy"
                   />
                   <p
                     class="md:ms-4 font-IBM font-normal text-base text-cnter md:text-start sm:text-center"
@@ -291,9 +315,9 @@
                 </div>
                 <div class="group step-card">
                   <img
-                    src="assets/icons/step-3.png"
+                    data-src="assets/icons/step-3.png"
                     alt="Step 3"
-                    class="mb-2 md:mb-0 w-20 h-20"
+                    class="mb-2 md:mb-0 w-20 h-20 lazy"
                   />
                   <p
                     class="md:ms-4 font-IBM font-normal text-base text-center md:text-start sm:text-center"
@@ -305,9 +329,9 @@
                 </div>
                 <div class="group step-card">
                   <img
-                    src="assets/icons/step-4.png"
+                    data-src="assets/icons/step-4.png"
                     alt="Step 4"
-                    class="mb-2 md:mb-0 w-20 h-20"
+                    class="mb-2 md:mb-0 w-20 h-20 lazy"
                   />
                   <p
                     class="md:ms-4 font-IBM font-normal text-base text-center md:text-start sm:text-center"
@@ -319,9 +343,9 @@
                 </div>
                 <div class="group step-card">
                   <img
-                    src="assets/icons/step-5.png"
+                    data-src="assets/icons/step-5.png"
                     alt="Step 5"
-                    class="mb-2 md:mb-0 w-20 h-20"
+                    class="mb-2 md:mb-0 w-20 h-20 lazy"
                   />
                   <p
                     class="md:ms-4 font-IBM font-normal text-base text-center md:text-start sm:text-center"
@@ -335,9 +359,9 @@
             </div>
             <div class="col-span-2 sm:p-8 py-8 px-0">
               <img
-                src="assets/images/setps-image.png"
+                data-src="assets/images/setps-image.png"
                 alt="setps image"
-                class="sm:w-4/5 m-auto w-full"
+                class="sm:w-4/5 m-auto w-full lazy"
               />
             </div>
           </div>
@@ -350,14 +374,14 @@
         >
           <div class="p-8 relative md:h-full h-80">
             <img
-              src="assets/images/factors-1.png"
+              data-src="assets/images/factors-1.png"
               alt="Factors image"
-              class="w-1/2 rounded-xl border-5 border-white absolute top-0 left-11"
+              class="w-1/2 rounded-xl border-5 border-white absolute top-0 left-11 lazy"
             />
             <img
-              src="assets/images/factors-2.png"
+              data-src="assets/images/factors-2.png"
               alt="Factors image"
-              class="w-1/2 rounded-xl border-4 border-white absolute bottom-0 right-11"
+              class="w-1/2 rounded-xl border-4 border-white absolute bottom-0 right-11 lazy"
             />
           </div>
           <div class="p-8">
@@ -483,7 +507,7 @@
                 بنين
               </h4>
               <img
-                src="assets/images/boy.png"
+                src="//assets/images/boy.png"
                 alt="Boy Image"
                 class="w-36 object-cover"
               />
@@ -498,9 +522,9 @@
                 بنات
               </h4>
               <img
-                src="assets/images/girl.png"
+                data-src="assets/images/girl.png"
                 alt="Girl Image"
-                class="w-32 object-cover"
+                class="w-32 object-cover lazy"
               />
             </button>
           </div>
@@ -509,8 +533,8 @@
     </div>
 
     <!-- flow bite JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1//flowbite.min.js"></script>
     <!-- Custom Js files -->
-    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

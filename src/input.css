@@ -41,6 +41,14 @@
     @apply text-base font-bold font-IBM text-white flex justify-center items-center w-10 h-10 rounded-full absolute content-[attr(before)] -right-14 bg-gradient-to-bl from-main-600 from-0% via-main-600 via-50% to-secondary to-100%;
   }
 }
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
 /* fade-in-fwd */
 @-webkit-keyframes fade-in-fwd {
   0% {
@@ -143,6 +151,7 @@
     opacity: 1;
   }
 }
+
 /* slide-in-fwd-top */
 @-webkit-keyframes slide-in-fwd-top {
   0% {
@@ -170,11 +179,6 @@
 }
 /*  */
 
-/* [data-animation="slide-in"] {
-  opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-} */
-
 [data-animation="slide-in"].slide-in-fwd-top {
   animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   opacity: 1;
@@ -198,6 +202,7 @@
     0.5s both;
   animation: rotate-in-2-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
+
 .slide-in-fwd-top:nth-of-type(1) {
   -webkit-animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     1.4s both;

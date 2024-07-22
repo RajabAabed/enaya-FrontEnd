@@ -755,6 +755,10 @@ video {
   width: 8rem;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -777,10 +781,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-36 {
-  width: 9rem;
 }
 
 .max-w-2xl {
@@ -1290,6 +1290,15 @@ video {
   content: var(--tw-content);
 }
 
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
 /* fade-in-fwd */
 
 @keyframes fade-in-fwd {
@@ -1362,11 +1371,6 @@ video {
 
 /*  */
 
-/* [data-animation="slide-in"] {
-  opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-} */
-
 [data-animation="slide-in"].slide-in-fwd-top {
   animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   opacity: 1;
@@ -1413,14 +1417,14 @@ video {
     both;
 }
 
-.hover\:bg-gray-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-girlColor-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(194 120 178 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-main-600:hover {

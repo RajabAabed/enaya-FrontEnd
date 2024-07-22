@@ -38,27 +38,35 @@ function autoplaySlider(interval) {
   setInterval(showNextSlide, interval);
 }
 
-// Initialize the autoplay slider with a 3-second interval
+//  7S
 autoplaySlider(7000);
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll("img.lazy");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const sections = document.querySelectorAll('[data-animation="slide-in"]');
+  const lazyLoad = (image) => {
+    image.src = image.dataset.src;
+    image.addEventListener("load", () => {
+      image.classList.add("loaded");
+    });
+  };
 
-//   const observer = new IntersectionObserver(
-//     (entries, observer) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.classList.add("slide-in-fwd-top");
-//           observer.unobserve(entry.target);
-//         }
-//       });
-//     },
-//     {
-//       threshold: 0.9, // Adjust as needed
-//     }
-//   );
+  if ("IntersectionObserver" in window) {
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          lazyLoad(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
 
-//   sections.forEach((section) => {
-//     observer.observe(section);
-//   });
-// });
+    lazyImages.forEach((img) => {
+      observer.observe(img);
+    });
+  } else {
+    // Fallback for older browsers
+    lazyImages.forEach((img) => {
+      lazyLoad(img);
+    });
+  }
+});
