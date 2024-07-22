@@ -11,7 +11,7 @@ function autoplaySlider(interval) {
   } else if (sliderImages.length < sliderText.length) {
     totalSlides = sliderImages.length;
   }
-  console.log(totalSlides);
+
   for (let i = 0; i < totalSlides; i++) {
     classes = "dots-box-item w-[10px] h-[10px] rounded-full m-1";
     if (i === 0) {
@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(img);
     });
   } else {
-    // Fallback for older browsers
     lazyImages.forEach((img) => {
       lazyLoad(img);
     });
