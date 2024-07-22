@@ -1290,6 +1290,34 @@ video {
   content: var(--tw-content);
 }
 
+/* Scroll */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #b4b4b4;
+  border-radius: 5px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #5da441;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b4b4b4;
+}
+
 /* lazy */
 
 .lazy {

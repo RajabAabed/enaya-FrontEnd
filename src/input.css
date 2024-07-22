@@ -41,6 +41,28 @@
     @apply text-base font-bold font-IBM text-white flex justify-center items-center w-10 h-10 rounded-full absolute content-[attr(before)] -right-14 bg-gradient-to-bl from-main-600 from-0% via-main-600 via-50% to-secondary to-100%;
   }
 }
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b4b4b4;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5da441;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b4b4b4;
+}
 
 /* lazy */
 .lazy {
