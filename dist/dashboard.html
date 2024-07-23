@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.webp" />
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,28 +17,416 @@
       src="https://kit.fontawesome.com/c150b48bd0.js"
       crossorigin="anonymous"
     ></script>
-    <!-- animation -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- flow bite -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
     <!-- Css files -->
-    <link rel="stylesheet" href="dist/assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/output.min.css" />
     <title>Enaya</title>
   </head>
-  <body>
-    <header></header>
-    <aside></aside>
-    <main></main>
+  <body class="bg-bgDashboard">
+    <header>
+      <nav
+        class="fixed top-0 sm:z-40 z-50 w-full bg-white sm:bg-transparent sm:ps-64"
+      >
+        <div class="px-3 py-3 sm:py-5 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-end">
+              <button
+                data-drawer-target="sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              >
+                <span class="sr-only">Open sidebar</span>
+                <svg
+                  class="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                  ></path>
+                </svg>
+              </button>
+              <a href="index.html" class="flex ms-2 md:me-24 sm:hidden">
+                <img
+                  src="assets/images/logo.webp"
+                  class="h-8 me-3"
+                  alt="Enaya Logo"
+                />
+              </a>
+            </div>
+            <form class="w-2/4 ml-auto sm:block hidden" method="get" action="">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full p-2 pe-10 ps-4 text-sm font-IBM text-gray-900 border border-gray-300 rounded-3xl bg-white focus:ring-main-600 focus:border-main-600"
+                  placeholder="البحث عن ..."
+                  required
+                />
+              </div>
+            </form>
+            <div class="flex items-center">
+              <button
+                type="button"
+                onclick="window.location.href='index.html'"
+                class="text-main-600 bg-white hover:text-white border border-main-600 hover:bg-main-600 font-medium font-IBM rounded-full text-sm px-5 py-2.5 text-center mx-1 my-1 transition-all ease-in-out duration-500"
+              >
+                <i class="fa-solid fa-sliders pe-1"></i>
+                استبيان تحديد الاحتياج</button
+              ><button
+                type="button"
+                class="btn-main btn-main-hover"
+                onclick="window.location.href='index.html'"
+              >
+                العودة للرئيسية
+                <i class="fa-solid fa-angle-left ps-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <aside
+      id="sidebar"
+      class="fixed sidebar top-0 right-0 sm:z-50 z-40 w-64 h-screen sm:pt-5 pt-20 transition-transform translate-x-full bg-white border-l border-gray-200 sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+        <a href="index.html" class="sm:block ms-2 md:me-24 hidden mb-5">
+          <img
+            src="assets/images/logo.webp"
+            class="h-14 w-auto"
+            alt="Enaya Logo"
+          />
+        </a>
+        <ul class="space-y-2 font-medium">
+          <li class="group active">
+            <a
+              href="#"
+              class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+            >
+              <img
+                src="assets/icons/dashboard-icons/home-icon.webp"
+                alt="Home Icon"
+                class="grayscale group-hover:grayscale-0 w-9"
+              />
+              <span
+                class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                >الرئيسية</span
+              >
+            </a>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+            >
+              <img
+                src="assets/icons/dashboard-icons/note-icon.webp"
+                alt="Home Icon"
+                class="grayscale group-hover:grayscale-0 w-9"
+              />
+              <span
+                class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                >المختصر</span
+              >
+            </a>
+          </li>
+          <li class="group active">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100"
+              aria-controls="dropdown-dashboard"
+              data-collapse-toggle="dropdown-dashboard"
+            >
+              <div class="flex flex-row justify-start items-center">
+                <img
+                  src="assets/icons/dashboard-icons/award-icon.webp"
+                  alt="Home Icon"
+                  class="grayscale group-hover:grayscale-0 w-9"
+                />
+                <span
+                  class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                  >المرحلة الابتدائية والمتوسطة</span
+                >
+              </div>
+              <i
+                class="fa-solid fa-angle-left ps-1 text-textDashboard group-hover:text-main-600"
+              ></i>
+            </button>
+            <ul id="dropdown-dashboard" class="hidden py-2 ps-3 space-y-2">
+              <li class="active">
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-1.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الأول (10 - 11 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-2.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثاني (12 إلي 13 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-3.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثالث (14 إلي 15 سنة)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="group">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100"
+              aria-controls="dropdown-dashboard-2"
+              data-collapse-toggle="dropdown-dashboard-2"
+            >
+              <div class="flex flex-row justify-start items-center">
+                <img
+                  src="assets/icons/dashboard-icons/award-icon.webp"
+                  alt="Home Icon"
+                  class="grayscale group-hover:grayscale-0 w-9"
+                />
+                <span
+                  class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                  >المرحلة الثانوية</span
+                >
+              </div>
+              <i
+                class="fa-solid fa-angle-left ps-1 text-textDashboard group-hover:text-main-600"
+              ></i>
+            </button>
+            <ul id="dropdown-dashboard-2" class="hidden py-2 ps-3 space-y-2">
+              <li class="active">
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-1.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الأول (10 - 11 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-2.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثاني (12 إلي 13 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-3.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثالث (14 إلي 15 سنة)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="sm:mt-24 mt-16 sm:ms-64 p-6">
+      <section class="pb-10">
+        <h2 class="font-IBM text-2xl font-bold mb-7">الأدلة التعريفية</h2>
+        <div class="grid md:grid-cols-4 sm:grid-cols:2 grid-cols-1 gap-4">
+          <div
+            class="group rounded-xl p-5 bg-white hover:bg-[#5DA441] flex flex-col justify-between items-start"
+          >
+            <div class="mb-7">
+              <img
+                src="assets/icons/dashboard-icons/book-saved.webp"
+                alt="Book Saved"
+                class="w-14 mb-5"
+              />
+
+              <h4
+                class="font-IBM text-base font-medium mb-3 group-hover:text-white"
+              >
+                الملف التعريفي لبرنامج عناية
+              </h4>
+              <p
+                class="font-IBM text-sm font-normal text-pColor group-hover:text-white"
+              >
+                يتضمن أهداف ومراحل البرنامج ، والتعريف بالكفايات العامة والخاصة
+                ،  وآلية التعامل مع الأنشطة
+              </p>
+            </div>
+            <a
+              href="#"
+              class="more-btn font-IBM text-sm font-normal text-main-600 ms-4 relative group-hover:text-white"
+              >اكتشف المزيد
+              <i class="fa-solid fa-arrow-left-long ms-3 rotate-45"></i
+            ></a>
+          </div>
+          <div
+            class="group rounded-xl p-5 bg-white hover:bg-[#5DA441] flex flex-col justify-between items-start"
+          >
+            <div class="mb-7">
+              <img
+                src="assets/icons/dashboard-icons/clipboard-text.webp"
+                alt="Book Saved"
+                class="w-14 mb-5"
+              />
+
+              <h4
+                class="font-IBM text-base font-medium mb-3 group-hover:text-white"
+              >
+                الدليل الارشادي لتنفيذ برنامج عناية
+              </h4>
+              <p
+                class="font-IBM text-sm font-normal text-pColor group-hover:text-white"
+              >
+                / يوضح الخطوات العملية لتنفيذ البرنامج ، ومعايير تنفيذه ، وتوصيف
+                فريق العمل
+              </p>
+            </div>
+            <a
+              href="#"
+              class="more-btn font-IBM text-sm font-normal text-main-600 ms-4 relative group-hover:text-white"
+              >اكتشف المزيد
+              <i class="fa-solid fa-arrow-left-long ms-3 rotate-45"></i
+            ></a>
+          </div>
+          <div
+            class="group rounded-xl p-5 bg-white hover:bg-[#5DA441] flex flex-col justify-between items-start"
+          >
+            <div class="mb-7">
+              <img
+                src="assets/icons/dashboard-icons/lovely.webp"
+                alt="Book Saved"
+                class="w-14 mb-5"
+              />
+
+              <h4
+                class="font-IBM text-base font-medium mb-3 group-hover:text-white"
+              >
+                الرعاية النفسية لليتيم
+              </h4>
+              <p
+                class="font-IBM text-sm font-normal text-pColor group-hover:text-white"
+              >
+                يأتي هذا الدليل ليعين المربي والجهة القائمة على البرنامج في
+                تحقيق واحدة من أهم الكفايات وهي : أن يتسم اليتيم بالتوافق النفسي
+              </p>
+            </div>
+            <a
+              href="#"
+              class="more-btn font-IBM text-sm font-normal text-main-600 ms-4 relative group-hover:text-white"
+              >اكتشف المزيد
+              <i class="fa-solid fa-arrow-left-long ms-3 rotate-45"></i
+            ></a>
+          </div>
+          <div
+            class="group rounded-xl p-5 bg-white hover:bg-[#5DA441] flex flex-col justify-between items-start"
+          >
+            <div class="mb-7">
+              <img
+                src="assets/icons/dashboard-icons/calendar.webp"
+                alt="Book Saved"
+                class="w-14 mb-5"
+              />
+
+              <h4
+                class="font-IBM text-base font-medium mb-3 group-hover:text-white"
+              >
+                خصائص المراحل العمرية وتطبيقاتها
+              </h4>
+              <p
+                class="font-IBM text-sm font-normal text-pColor group-hover:text-white"
+              >
+                يأتي هذا الملف من أجل أن يسهم في إثراء وعي المربي معرفياً
+                ووجدانياً وسلوكياً ، بما يمكنه من تطوير مهارات التعامل مع
+                الأيتام وفق احتياجاتهم وخصائص نموهم
+              </p>
+            </div>
+            <a
+              href="#"
+              class="more-btn font-IBM text-sm font-normal text-main-600 ms-4 relative group-hover:text-white"
+              >اكتشف المزيد
+              <i class="fa-solid fa-arrow-left-long ms-3 rotate-45"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="pb-10">
+        <h2 class="font-IBM text-2xl font-bold mb-7">المراحل التعليمية</h2>
+      </section>
+    </main>
     <footer></footer>
+
+    <!-- Custom Js files -->
+    <script src="assets/js/main.js" as="script" defer></script>
   </body>
-  <!-- flow bite JS -->
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
-  <!-- Custom Js files -->
-  <script src="dist/assets/js/main.js"></script>
 </html>

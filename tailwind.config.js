@@ -19,6 +19,8 @@ module.exports = {
           200: "#c278b229",
           600: "#C278B2",
         },
+        bgDashboard: "#F5F5FA",
+        textDashboard: "#4D4D4C",
       },
     },
   },
