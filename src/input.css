@@ -40,6 +40,9 @@
   .custom-li::before {
     @apply text-base font-bold font-IBM text-white flex justify-center items-center w-10 h-10 rounded-full absolute content-[attr(before)] -right-14 bg-gradient-to-bl from-main-600 from-0% via-main-600 via-50% to-secondary to-100%;
   }
+  .badge-level {
+    @apply m-0 py-2 px-4 rounded-full transition-all duration-500 ease-in-out font-IBM font-medium text-sm;
+  }
 }
 .more-btn::before {
   @apply text-base font-bold font-IBM text-white flex justify-center items-center w-10 h-10 rounded-full absolute content-[''] -right-5 -top-3 bg-main-600 bg-opacity-20;

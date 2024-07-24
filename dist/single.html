@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.webp" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome-->
+    <script
+      src="https://kit.fontawesome.com/c150b48bd0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Css files -->
+    <link rel="stylesheet" href="assets/css/output.min.css" />
+    <title>Enaya</title>
+  </head>
+  <body class="bg-white">
+    <header>
+      <nav
+        class="fixed top-0 sm:z-40 z-50 w-full bg-white sm:bg-bgDashboard sm:ps-64"
+      >
+        <div class="px-3 py-3 sm:py-5 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-end">
+              <button
+                data-drawer-target="sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              >
+                <span class="sr-only">Open sidebar</span>
+                <svg
+                  class="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                  ></path>
+                </svg>
+              </button>
+              <a href="index.html" class="flex ms-2 md:me-24 sm:hidden">
+                <img
+                  src="assets/images/logo.webp"
+                  class="h-8 me-3"
+                  alt="Enaya Logo"
+                />
+              </a>
+            </div>
+            <!-- this form dispaly in lg screen, the mobile screen the search bar inner sidebar -->
+            <form class="w-2/4 ml-auto sm:block hidden" method="get" action="">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full p-2 pe-10 ps-4 text-sm font-IBM text-gray-900 border border-gray-300 rounded-3xl bg-white focus:ring-main-600 focus:border-main-600"
+                  placeholder="البحث عن ..."
+                  required
+                />
+              </div>
+            </form>
+            <div class="flex items-center">
+              <button
+                type="button"
+                onclick="window.location.href='index.html'"
+                class="text-main-600 bg-white hover:text-white border border-main-600 hover:bg-main-600 font-medium font-IBM rounded-full sm:text-sm text-[10px] px-5 py-2.5 text-center mx-1 my-1 transition-all ease-in-out duration-500"
+              >
+                <i class="fa-solid fa-sliders pe-1"></i>
+                استبيان تحديد الاحتياج</button
+              ><button
+                type="button"
+                class="btn-main btn-main-hover sm:text-sm"
+                onclick="window.location.href='index.html'"
+              >
+                العودة للرئيسية
+                <i class="fa-solid fa-angle-left ps-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <aside
+      id="sidebar"
+      class="fixed sidebar top-0 right-0 sm:z-50 z-40 w-64 h-screen sm:pt-5 pt-20 transition-transform translate-x-full bg-white border-l border-gray-200 sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+        <a href="index.html" class="sm:block ms-2 md:me-24 hidden mb-5">
+          <img
+            src="assets/images/logo.webp"
+            class="h-14 w-auto"
+            alt="Enaya Logo"
+          />
+        </a>
+        <ul class="space-y-2 font-medium">
+          <li class="group active">
+            <a
+              href="#"
+              class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+            >
+              <img
+                src="assets/icons/dashboard-icons/home-icon.webp"
+                alt="Home Icon"
+                class="grayscale group-hover:grayscale-0 w-9"
+              />
+              <span
+                class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                >الرئيسية</span
+              >
+            </a>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+            >
+              <img
+                src="assets/icons/dashboard-icons/note-icon.webp"
+                alt="Home Icon"
+                class="grayscale group-hover:grayscale-0 w-9"
+              />
+              <span
+                class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600 transition-all duration-500 ease-in-out"
+                >المختصر</span
+              >
+            </a>
+          </li>
+          <li class="group active">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-2 text-base text-gray-900 rounded-lg group hover:bg-gray-100 transition-all duration-500 ease-in-out"
+              aria-controls="dropdown-dashboard"
+              data-collapse-toggle="dropdown-dashboard"
+            >
+              <div class="flex flex-row justify-start items-center">
+                <img
+                  src="assets/icons/dashboard-icons/award-icon.webp"
+                  alt="Home Icon"
+                  class="grayscale group-hover:grayscale-0 w-9"
+                />
+                <span
+                  class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                  >المرحلة الابتدائية والمتوسطة</span
+                >
+              </div>
+              <i
+                class="fa-solid fa-angle-left ps-1 text-textDashboard group-hover:text-main-600"
+              ></i>
+            </button>
+            <ul id="dropdown-dashboard" class="hidden py-2 ps-3 space-y-2">
+              <li class="active">
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-1.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الأول (10 - 11 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-2.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثاني (12 إلي 13 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-3.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثالث (14 إلي 15 سنة)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="group">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-2 text-base text-gray-900 transition-all duration-500 ease-in-out rounded-lg group hover:bg-gray-100"
+              aria-controls="dropdown-dashboard-2"
+              data-collapse-toggle="dropdown-dashboard-2"
+            >
+              <div class="flex flex-row justify-start items-center">
+                <img
+                  src="assets/icons/dashboard-icons/award-icon.webp"
+                  alt="Home Icon"
+                  class="grayscale group-hover:grayscale-0 w-9"
+                />
+                <span
+                  class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600 transition-all duration-500 ease-in-out"
+                  >المرحلة الثانوية</span
+                >
+              </div>
+              <i
+                class="fa-solid fa-angle-left ps-1 text-textDashboard group-hover:text-main-600 transition-all duration-500 ease-in-out"
+              ></i>
+            </button>
+            <ul id="dropdown-dashboard-2" class="hidden py-2 ps-3 space-y-2">
+              <li class="active">
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-1.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الأول (10 - 11 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-2.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثاني (12 إلي 13 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-3.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثالث (14 إلي 15 سنة)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- this form dispaly in lg screen, the mobile screen the search bar inner sidebar -->
+        <form class="w-full mt-5 block sm:hidden" method="get" action="">
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-2 pe-10 ps-4 text-sm font-IBM text-gray-900 border border-gray-300 rounded-3xl bg-white focus:ring-main-600 focus:border-main-600"
+              placeholder="البحث عن ..."
+              required
+            />
+          </div>
+        </form>
+      </div>
+    </aside>
+    <main>
+      <div class="sm:mt-24 mt-20 sm:ms-64 p-6 flex flex-row">
+        <section class="sm:w-9/12 w-full"></section>
+        <!-- fixed sidebar top-0 right-0 sm:z-50 z-40 w-64 h-screen sm:pt-5 pt-20 transition-transform translate-x-full bg-white border-l border-gray-200 sm:translate-x-0 -->
+        <section
+          class="sm:w-3/12 w-60 h-screen top-0 left-0 bg-slate-400 sm:pt-5 pt-20 transition-transform -translate-x-full border-l border-gray-200 sm:translate-x-0"
+        ></section>
+      </div>
+    </main>
+    <footer></footer>
+    <!-- Custom Js files -->
+    <script src="assets/js/main.js" as="script" defer></script>
+  </body>
+</html>
