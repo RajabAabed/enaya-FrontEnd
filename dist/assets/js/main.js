@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sliderText = document.querySelectorAll(".text-box-item");
   const sliderImages = document.querySelectorAll(".img-box-item");
   const dotsBox = document.querySelector(".dots-box");
-  if (sliderText) {
+  if (dotsBox) {
     function autoplaySlider(interval) {
       const totalSlides = Math.min(sliderImages.length, sliderText.length);
 
@@ -157,11 +157,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // model
 
-  const openModalButton = document.querySelector(
-    '[data-modal-target="login-modal"]'
-  );
-  if (openModalButton) {
-    const modal = document.getElementById("login-modal");
+  const modal = document.getElementById("login-modal");
+
+  if (modal) {
+    const openModalButton = document.querySelectorAll(
+      '[data-modal-target="login-modal"]'
+    );
     const closeModalButton = modal.querySelector(
       '[data-modal-hide="login-modal"]'
     );
@@ -187,7 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Add event listeners for opening and closing the modal
-    openModalButton.addEventListener("click", openModal);
+
+    openModalButton.forEach((button) => {
+      button.addEventListener("click", openModal);
+    });
     closeModalButton.addEventListener("click", closeModal);
 
     // Optional: Add an event listener to close the modal when clicking outside of it
