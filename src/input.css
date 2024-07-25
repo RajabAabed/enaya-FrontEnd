@@ -117,12 +117,7 @@
 .innerSideBar .active > a::before {
   @apply w-1 h-full absolute content-[''] top-0 right-0 bg-main-600;
 }
-/* #logo-sidebar {
-  --tw-translate-x: 100% !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-} */
+
 /* fade-in-fwd */
 @-webkit-keyframes fade-in-fwd {
   0% {
@@ -200,32 +195,6 @@
   }
 }
 
-/* rotate-in-2-cw */
-@-webkit-keyframes rotate-in-2-cw {
-  0% {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-@keyframes rotate-in-2-cw {
-  0% {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-
 /* slide-in-fwd-top */
 @-webkit-keyframes slide-in-fwd-top {
   0% {
@@ -270,40 +239,4 @@
   -webkit-animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.logos-box img {
-  -webkit-animation: rotate-in-2-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    0.5s both;
-  animation: rotate-in-2-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
-}
-
-.slide-in-fwd-top:nth-of-type(1) {
-  -webkit-animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    1.4s both;
-  animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s
-    both;
-}
-.slide-in-fwd-top:nth-of-type(2) {
-  -webkit-animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    1.1s both;
-  animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s
-    both;
-}
-.slide-in-fwd-top:nth-of-type(3) {
-  -webkit-animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    0.8s both;
-  animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s
-    both;
-}
-.slide-in-fwd-top:nth-of-type(4) {
-  -webkit-animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    0.5s both;
-  animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s
-    both;
-}
-.slide-in-fwd-top:nth-of-type(5) {
-  -webkit-animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    0.2s both;
-  animation: slide-in-fwd-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s
-    both;
 }

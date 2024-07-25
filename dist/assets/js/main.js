@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+  });
   // silder
   const sliderText = document.querySelectorAll(".text-box-item");
   const sliderImages = document.querySelectorAll(".img-box-item");
