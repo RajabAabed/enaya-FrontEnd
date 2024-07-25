@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // sidebar
+  // main sidebar
   const button = document.querySelector('button[data-drawer-target="sidebar"]');
   const sidebar = document.getElementById("sidebar");
   if (sidebar) {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.replace("translate-x-full", "translate-x-0");
         newDiv.setAttribute("drawer-backdrop", "");
         newDiv.className =
-          "bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30";
+          "bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-[35]";
         document.body.appendChild(newDiv);
       }
     });
@@ -190,6 +190,28 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("click", function (event) {
       if (event.target === modal) {
         closeModal();
+      }
+    });
+  }
+
+  // inner sidebar
+  // sidebar
+  const innerbutton = document.querySelector(
+    'button[data-drawer-target="innerSideBar"]'
+  );
+  const innersidebar = document.getElementById("innerSideBar");
+  if (innersidebar) {
+    // -translate-x-[344px]
+    innerbutton.addEventListener("click", () => {
+      if (innersidebar.classList.contains("translate-x-0")) {
+        innersidebar.classList.replace("translate-x-0", "-translate-x-[280px]");
+        innerbutton.classList.replace("left-[240px]", "left-6");
+        document.body.classList.remove("overflow-hidden");
+      } else {
+        document.body.classList.add("overflow-hidden");
+        innerbutton.classList.replace("left-6", "left-[240px]");
+
+        innersidebar.classList.replace("-translate-x-[280px]", "translate-x-0");
       }
     });
   }

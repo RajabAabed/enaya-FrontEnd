@@ -43,6 +43,19 @@
   .badge-level {
     @apply m-0 py-2 px-4 rounded-full transition-all duration-500 ease-in-out font-IBM font-medium text-sm;
   }
+  .inner-sidebar-item {
+    @apply flex items-center px-1 py-4 hover:bg-main-200 transition-all duration-500 ease-in-out relative;
+  }
+
+  .inner-sidebar-item-text {
+    @apply ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600;
+  }
+  .inner-sidebar-title {
+    @apply flex items-center px-1 py-4 bg-main-200;
+  }
+  .inner-sidebar-title-text {
+    @apply ms-3 font-IBM text-base font-semibold text-black;
+  }
 }
 .more-btn::before {
   @apply text-base font-bold font-IBM text-white flex justify-center items-center w-10 h-10 rounded-full absolute content-[''] -right-5 -top-3 bg-main-600 bg-opacity-20;
@@ -81,18 +94,28 @@
   opacity: 1;
 }
 
-.active > a > span,
-.active > button > div > span {
+.sidebar .active > a > span,
+.sidebar .active > button > div > span {
   @apply text-main-600 !important;
 }
 
-.active > a > img,
-.active > button > div > img {
+.sidebar .active > a > img,
+.sidebar .active > button > div > img {
   filter: grayscale(0) !important;
 }
-.active > a,
-.active > button {
+.sidebar .active > a,
+.sidebar .active > button {
   @apply bg-gray-100 !important;
+}
+
+.innerSideBar .active > a > span {
+  @apply text-main-600  font-semibold !important;
+}
+.innerSideBar .active > a {
+  @apply bg-gray-100 !important;
+}
+.innerSideBar .active > a::before {
+  @apply w-1 h-full absolute content-[''] top-0 right-0 bg-main-600;
 }
 /* #logo-sidebar {
   --tw-translate-x: 100% !important;
