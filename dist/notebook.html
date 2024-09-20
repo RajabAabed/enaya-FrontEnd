@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.webp" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome-->
+    <script
+      src="https://kit.fontawesome.com/c150b48bd0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Css files -->
+    <link rel="stylesheet" href="assets/css/output.min.css" />
+    <title>Enaya</title>
+  </head>
+  <body class="bg-white">
+    <header>
+      <nav
+        class="fixed top-0 sm:z-40 z-50 w-full bg-white sm:bg-white sm:ps-64"
+      >
+        <div class="px-3 py-3 sm:py-5 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-end">
+              <button
+                data-drawer-target="sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              >
+                <span class="sr-only">Open sidebar</span>
+                <svg
+                  class="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                  ></path>
+                </svg>
+              </button>
+              <a href="index.html" class="flex ms-2 md:me-24 sm:hidden">
+                <img
+                  src="assets/images/logo.webp"
+                  class="h-8 me-3"
+                  alt="Enaya Logo"
+                />
+              </a>
+            </div>
+            <!-- this form dispaly in lg screen, the mobile screen the search bar inner sidebar -->
+            <form class="w-2/4 ml-auto sm:block hidden" method="get" action="">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full p-2 pe-10 ps-4 text-sm font-IBM text-gray-900 border border-gray-300 rounded-3xl bg-white focus:ring-main-600 focus:border-main-600"
+                  placeholder="البحث عن ..."
+                  required
+                />
+              </div>
+            </form>
+            <div class="flex items-center">
+              <!-- this button dispaly in lg screen, the mobile screen the button inner sidebar -->
+
+              <button
+                type="button"
+                onclick="window.location.href='index.html'"
+                class="hidden sm:block text-main-600 bg-white hover:text-white border border-main-600 hover:bg-main-600 font-medium font-IBM rounded-full text-sm px-5 py-2.5 text-center mx-1 my-1 transition-all ease-in-out duration-500"
+              >
+                <i class="fa-solid fa-sliders pe-1"></i>
+                استبيان تحديد الاحتياج</button
+              ><button
+                type="button"
+                class="btn-main btn-main-hover sm:text-sm"
+                onclick="window.location.href='index.html'"
+              >
+                العودة للرئيسية
+                <i class="fa-solid fa-angle-left ps-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <aside
+      id="sidebar"
+      class="fixed sidebar top-0 right-0 sm:z-50 z-40 w-64 h-screen sm:pt-5 pt-20 transition-transform translate-x-full bg-white border-l border-gray-200 sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+        <a href="index.html" class="sm:block ms-2 md:me-24 hidden mb-5">
+          <img
+            src="assets/images/logo.webp"
+            class="h-14 w-auto"
+            alt="Enaya Logo"
+          />
+        </a>
+        <ul class="space-y-2 font-medium">
+          <li class="group">
+            <a
+              href="dashboard.html"
+              class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+            >
+              <img
+                src="assets/icons/dashboard-icons/home-icon.webp"
+                alt="Home Icon"
+                class="grayscale group-hover:grayscale-0 w-9"
+              />
+              <span
+                class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                >الرئيسية</span
+              >
+            </a>
+          </li>
+          <li class="group">
+            <a
+              href="summary.html"
+              class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+            >
+              <img
+                src="assets/icons/dashboard-icons/note-icon.webp"
+                alt="Home Icon"
+                class="grayscale group-hover:grayscale-0 w-9"
+              />
+              <span
+                class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600 transition-all duration-500 ease-in-out"
+                >المختصر</span
+              >
+            </a>
+          </li>
+          <li class="group active">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-2 text-base rounded-lg group hover:bg-gray-100 transition-all duration-500 ease-in-out"
+              aria-controls="dropdown-dashboard"
+              data-collapse-toggle="dropdown-dashboard"
+            >
+              <div class="flex flex-row justify-start items-center">
+                <img
+                  src="assets/icons/dashboard-icons/award-icon.webp"
+                  alt="Home Icon"
+                  class="grayscale group-hover:grayscale-0 w-9"
+                />
+                <span
+                  class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600"
+                  >المرحلة الابتدائية والمتوسطة</span
+                >
+              </div>
+              <i
+                class="fa-solid fa-angle-left ps-1 text-textDashboard group-hover:text-main-600"
+              ></i>
+            </button>
+            <ul id="dropdown-dashboard" class="py-2 ps-3 space-y-2">
+              <li class="active">
+                <a
+                  href="single.html"
+                  class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-1.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الأول (10 - 11 سنة)</span
+                  >
+                </a>
+              </li>
+              <li class="hidden">
+                <a
+                  href="#"
+                  class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-2.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثاني (12 إلي 13 سنة)</span
+                  >
+                </a>
+              </li>
+              <li class="hidden">
+                <a
+                  href="#"
+                  class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-3.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثالث (14 إلي 15 سنة)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="hidden group">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-2 text-base transition-all duration-500 ease-in-out rounded-lg group hover:bg-gray-100"
+              aria-controls="dropdown-dashboard-2"
+              data-collapse-toggle="dropdown-dashboard-2"
+            >
+              <div class="flex flex-row justify-start items-center">
+                <img
+                  src="assets/icons/dashboard-icons/award-icon.webp"
+                  alt="Home Icon"
+                  class="grayscale group-hover:grayscale-0 w-9"
+                />
+                <span
+                  class="ms-3 font-IBM text-sm text-textDashboard group-hover:text-main-600 transition-all duration-500 ease-in-out"
+                  >المرحلة الثانوية</span
+                >
+              </div>
+              <i
+                class="fa-solid fa-angle-left ps-1 text-textDashboard group-hover:text-main-600 transition-all duration-500 ease-in-out"
+              ></i>
+            </button>
+            <ul id="dropdown-dashboard-2" class="hidden py-2 ps-3 space-y-2">
+              <li class="">
+                <a
+                  href="#"
+                  class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-1.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الأول (10 - 11 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-2.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثاني (12 إلي 13 سنة)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-all duration-500 ease-in-out"
+                >
+                  <img
+                    src="assets/icons/dashboard-icons/award-level-3.webp"
+                    alt="award Icon"
+                    class="w-6"
+                  />
+                  <span class="ms-3 font-IBM text-xs text-textDashboard"
+                    >المستوي الثالث (14 إلي 15 سنة)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- this form dispaly in lg screen, the mobile screen the search bar inner sidebar -->
+        <form class="w-full mt-5 block sm:hidden" method="get" action="">
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-2 pe-10 ps-4 text-sm font-IBM text-gray-900 border border-gray-300 rounded-3xl bg-white focus:ring-main-600 focus:border-main-600"
+              placeholder="البحث عن ..."
+              required
+            />
+          </div>
+        </form>
+        <button
+          type="button"
+          onclick="window.location.href='index.html'"
+          class="inline-block w-full sm:hidden text-main-600 bg-white hover:text-white border border-main-600 hover:bg-main-600 font-medium font-IBM rounded-full text-sm px-5 py-2.5 text-center mx-1 my-2 transition-all ease-in-out duration-500"
+        >
+          <i class="fa-solid fa-sliders pe-1"></i>
+          استبيان تحديد الاحتياج
+        </button>
+      </div>
+    </aside>
+    <main>
+      <div class="sm:mt-24 mt-20 sm:ms-64 sm:me-80 p-6">
+        <section class="w-full">
+          <!-- page title -->
+          <div class="mb-7">
+            <h1
+              class="mb-3 font-IBM font-bold sm:text-2xl text-xl text-main-600"
+            >
+              المرحلة الابتدائية والمتوسطة
+            </h1>
+            <!-- Breadcrumb -->
+            <nav class="flex" aria-label="Breadcrumb">
+              <ol
+                class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+              >
+                <li class="inline-flex items-center">
+                  <a
+                    href="#"
+                    class="inline-flex items-center font-IBM sm:text-sm text-xs font-normal text-pColor hover:text-main-600"
+                  >
+                    الرئيسية
+                  </a>
+                  <i
+                    class="fa-solid fa-angle-left ms-2 text-pColor sm:text-sm text-xs"
+                  ></i>
+                </li>
+                <li>
+                  <div class="flex items-center">
+                    <a
+                      href="#"
+                      class="inline-flex items-center font-IBM sm:text-sm text-xs font-normal text-pColor hover:text-main-600"
+                    >
+                      عناية بنين
+                    </a>
+                    <i
+                      class="fa-solid fa-angle-left ms-2 text-pColor sm:text-sm text-xs"
+                    ></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center">
+                    <a
+                      href="#"
+                      class="inline-flex items-center font-IBM sm:text-sm text-xs font-normal text-pColor hover:text-main-600"
+                    >
+                      المرحلة الابتدائية والمتوسطة
+                    </a>
+                    <i
+                      class="fa-solid fa-angle-left ms-2 text-pColor sm:text-sm text-xs"
+                    ></i>
+                  </div>
+                </li>
+                <li aria-current="page">
+                  <div class="flex items-center">
+                    <a
+                      class="inline-flex items-center font-IBM sm:text-sm text-xs font-normal text-main-600"
+                    >
+                      المستوي الأولي (10 إلي 11 سنوات)
+                    </a>
+                  </div>
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <!-- page content -->
+          <div class="mb-7">
+            <!-- inner title -->
+            <div class="flex flex-row items-center justify-start">
+              <img
+                src="assets/icons/dashboard-icons/award-level-1.webp"
+                alt="award level 1"
+                class="w-10 h-10"
+              />
+              <h3 class="font-IBM font-medium text-lg text-black ms-2">
+                المستوي الأول (10 إلي 11 سنوات)
+              </h3>
+            </div>
+            <!-- inner content -->
+            <div class="py-6">
+              <section>
+                <h5 class="font-IBM font-medium text-lg text-black ms-2">
+                  كراسات الطالب
+                </h5>
+                <div class="mt-10">
+                  <ul
+                    class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                    id="default-styled-tab"
+                    data-tabs-toggle="#default-styled-tab-content"
+                    data-tabs-active-classes="text-black border-main-600 bg-main-200"
+                    data-tabs-inactive-classes="text-pColor bg-white"
+                    role="tablist"
+                  >
+                    <li class="me-2 sm:my-0 my-1" role="presentation">
+                      <button
+                        class="inline-block px-6 py-3 bg-white rounded-full border text-pColor text-sm font-IBM font-medium hover:bg-main-600 hover:text-white transition-all ease-in-out duration-500"
+                        id="tab-1-styled-tab"
+                        data-tabs-target="#tab-1"
+                        type="button"
+                        role="tab"
+                        aria-controls="tab-1"
+                        aria-selected="false"
+                      >
+                        المحور الايماني
+                      </button>
+                    </li>
+                    <li class="me-2 sm:my-0 my-1" role="presentation">
+                      <button
+                        class="inline-block px-6 py-3 bg-white rounded-full border text-pColor text-sm font-IBM font-medium hover:bg-main-600 hover:text-white transition-all ease-in-out duration-500"
+                        id="tab-2-styled-tab"
+                        data-tabs-target="#tab-2"
+                        type="button"
+                        role="tab"
+                        aria-controls="tab-2"
+                        aria-selected="false"
+                      >
+                        محور القيم الاخلاقية
+                      </button>
+                    </li>
+                    <li class="me-2 sm:my-0 my-1" role="presentation">
+                      <button
+                        class="inline-block px-6 py-3 bg-white rounded-full border text-pColor text-sm font-IBM font-medium hover:bg-main-600 hover:text-white transition-all ease-in-out duration-500"
+                        id="tab-3-styled-tab"
+                        data-tabs-target="#tab-3"
+                        type="button"
+                        role="tab"
+                        aria-controls="tab-3"
+                        aria-selected="false"
+                      >
+                        المحور الاجتماعي
+                      </button>
+                    </li>
+                    <li class="me-2 sm:my-0 my-1" role="presentation">
+                      <button
+                        class="inline-block px-6 py-3 bg-white rounded-full border text-pColor text-sm font-IBM font-medium hover:bg-main-600 hover:text-white transition-all ease-in-out duration-500"
+                        id="tab-4-styled-tab"
+                        data-tabs-target="#tab-4"
+                        type="button"
+                        role="tab"
+                        aria-controls="tab-4"
+                        aria-selected="false"
+                      >
+                        المحور المهاري
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div id="default-styled-tab-content">
+                  <div
+                    class="py-4"
+                    id="tab-1"
+                    role="tabpanel"
+                    aria-labelledby="tab-1-tab"
+                  >
+                    <div
+                      class="inline-block min-w-full align-middle rounded-xl overflow-hidden border"
+                    >
+                      <table
+                        class="min-w-full divide-y divide-gray-300 border-[#CCD3D9]"
+                      >
+                        <thead class="bg-[#F5F5F5]">
+                          <tr>
+                            <th
+                              scope="col"
+                              class="py-3.5 pl-4 pr-3 text-start font-IBM text-sm font-medium text-black sm:pl-0"
+                            >
+                              الكفاية العامة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              الكفاية الخاصة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              أسلوب التعلم
+                            </th>
+                            <th
+                              scope="col"
+                              class="relative py-3.5 pl-3 pr-4 sm:pr-0"
+                            >
+                              <span class="sr-only">ملفات</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    class="hidden py-4"
+                    id="tab-2"
+                    role="tabpanel"
+                    aria-labelledby="tab-2-tab"
+                  >
+                    <div
+                      class="inline-block min-w-full align-middle rounded-xl overflow-hidden border"
+                    >
+                      <table
+                        class="min-w-full divide-y divide-gray-300 border-[#CCD3D9]"
+                      >
+                        <thead class="bg-[#F5F5F5]">
+                          <tr>
+                            <th
+                              scope="col"
+                              class="py-3.5 pl-4 pr-3 text-start font-IBM text-sm font-medium text-black sm:pl-0"
+                            >
+                              الكفاية العامة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              الكفاية الخاصة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              أسلوب التعلم
+                            </th>
+                            <th
+                              scope="col"
+                              class="relative py-3.5 pl-3 pr-4 sm:pr-0"
+                            >
+                              <span class="sr-only">ملفات</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    class="hidden py-4"
+                    id="tab-3"
+                    role="tabpanel"
+                    aria-labelledby="tab-3-tab"
+                  >
+                    <div
+                      class="inline-block min-w-full align-middle rounded-xl overflow-hidden border"
+                    >
+                      <table
+                        class="min-w-full divide-y divide-gray-300 border-[#CCD3D9]"
+                      >
+                        <thead class="bg-[#F5F5F5]">
+                          <tr>
+                            <th
+                              scope="col"
+                              class="py-3.5 pl-4 pr-3 text-start font-IBM text-sm font-medium text-black sm:pl-0"
+                            >
+                              الكفاية العامة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              الكفاية الخاصة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              أسلوب التعلم
+                            </th>
+                            <th
+                              scope="col"
+                              class="relative py-3.5 pl-3 pr-4 sm:pr-0"
+                            >
+                              <span class="sr-only">ملفات</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    class="hidden py-4"
+                    id="tab-4"
+                    role="tabpanel"
+                    aria-labelledby="tab-4-tab"
+                  >
+                    <div
+                      class="inline-block min-w-full align-middle rounded-xl overflow-hidden border"
+                    >
+                      <table
+                        class="min-w-full divide-y divide-gray-300 border-[#CCD3D9]"
+                      >
+                        <thead class="bg-[#F5F5F5]">
+                          <tr>
+                            <th
+                              scope="col"
+                              class="py-3.5 pl-4 pr-3 text-start font-IBM text-sm font-medium text-black sm:pl-0"
+                            >
+                              الكفاية العامة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              الكفاية الخاصة
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5 text-start font-IBM text-sm font-medium text-black"
+                            >
+                              أسلوب التعلم
+                            </th>
+                            <th
+                              scope="col"
+                              class="relative py-3.5 pl-3 pr-4 sm:pr-0"
+                            >
+                              <span class="sr-only">ملفات</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900 sm:pl-0"
+                            >
+                              يعظم الله عز وجل
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              يبين مظاهر عظمة الله في خلق الإنسان والكون
+                            </td>
+                            <td
+                              class="whitespace-nowrap font-IBM px-3 py-4 text-sm text-gray-900"
+                            >
+                              التدريس المباشر
+                            </td>
+
+                            <td
+                              class="relative whitespace-nowrap font-IBM py-4 pl-3 pr-4 text-end text-xl font-medium sm:pr-0"
+                            >
+                              <a
+                                href="#"
+                                class="text-red-600 hover:text-red-900 mx-1"
+                                ><i class="fa-solid fa-file-arrow-down"></i
+                              ></a>
+                              <a
+                                href="#"
+                                class="text-main-600 hover:text-primary mx-1"
+                                ><i class="fa-solid fa-eye"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <aside
+          id="innerSideBar"
+          class="md:w-80 innerSideBar bg-white w-64 fixed h-screen overflow-hidden z-20 top-0 left-0 sm:pt-[89px] pt-[70px] md:pe-7 md:ps-5 transition-transform -translate-x-[280px] border-l border-gray-200 md:translate-x-0"
+        >
+          <h4
+            class="font-IBM font-normal text-pColor text-sm my-4 px-3 md:px-0"
+          >
+            في هذه الصفحة
+          </h4>
+          <div
+            class="h-full overflow-y-auto bg-[#fafafa] md:bg-[#F5F5F5] md:bg-opacity-50 border-s-4 border-[#F5F5F5]"
+          >
+            <ul class="space-y-1 font-medium">
+              <!-- title -->
+              <li class="group">
+                <a class="inner-sidebar-title">
+                  <span class="inner-sidebar-title-text">بطاقات الانشطة</span>
+                </a>
+              </li>
+              <!-- items -->
+              <li class="group active">
+                <a href="#" class="inner-sidebar-item">
+                  <span class="inner-sidebar-item-text">مقدمة</span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="#" class="inner-sidebar-item">
+                  <span class="inner-sidebar-item-text">بطاقات الأنشطة</span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="#" class="inner-sidebar-item">
+                  <span class="inner-sidebar-item-text">كراسات الطالب</span>
+                </a>
+              </li>
+              <!-- title -->
+              <li class="group">
+                <a class="inner-sidebar-title">
+                  <span class="inner-sidebar-title-text">التقويم </span>
+                </a>
+              </li>
+              <!-- items -->
+              <li class="group">
+                <a href="#" class="inner-sidebar-item">
+                  <span class="inner-sidebar-item-text"
+                    >إرشادات لتصحيح أدوات التقويم</span
+                  >
+                </a>
+              </li>
+              <li class="group">
+                <a href="#" class="inner-sidebar-item">
+                  <span class="inner-sidebar-item-text"> التقويم (1)</span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="#" class="inner-sidebar-item">
+                  <span class="inner-sidebar-item-text">التقويم (2) </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <button
+          class="fixed top-32 left-6 z-30 border-2 border-main-600 bg-gray-100 text-main-600 rounded-full p-2 block md:hidden"
+          data-drawer-target="innerSideBar"
+        >
+          <span class="sr-only">Open inner sidebar</span>
+          <svg
+            class="w-4 h-4"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </main>
+    <footer></footer>
+
+    <!-- Aos  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Js files -->
+    <script src="assets/js/main.js" as="script" defer></script>
+  </body>
+</html>
