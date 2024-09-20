@@ -84,6 +84,12 @@
   background: #b4b4b4;
 }
 
+.icon-before::before {
+  content: "\f144";
+  font-family: "Font Awesome 6 Free" !important; /* Ensure this matches your Font Awesome version */
+  font-weight: 400;
+}
+
 /* lazy */
 .lazy {
   opacity: 0;
